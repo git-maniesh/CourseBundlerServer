@@ -6,8 +6,8 @@ import nodeCron from 'node-cron'
 // import { AdminStats } from "./models/AdminStats.js"
 import { Stats } from "./models/Stats.js"
 
-const cors = require('cors');
-app.use(cors());
+// const cors = require('cors');
+// app.use(cors());
 
 
 connectDB();
@@ -24,10 +24,10 @@ export const instance = new RazorPay({
     key_secret: process.env.RAZORPAY_API_SECRET,
 })
 
-nodeCron.schedule("0 0 0 1 * *", async () => {
+nodeCron.schedule("0 0 0 5 * *", async () => {
    try{
     // await AdminStats.create({});
-    await Stats.crete({})
+    await Stats.create({})
    }catch(error){
     console.log(error)
    }
