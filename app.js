@@ -21,7 +21,8 @@ app.use(express.urlencoded({
 
 app.use(cookieParser());
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
+    // origin:process.env.FRONTEND_URL,
+    origin:"https://course-bundler-frontend.vercel.app/",
     credentials:true,
     methods:["GET","POST","DELETE","PUT"]
 }))
