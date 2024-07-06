@@ -6,7 +6,8 @@ import nodeCron from 'node-cron'
 // import { AdminStats } from "./models/AdminStats.js"
 import { Stats } from "./models/Stats.js"
 
-
+const cors = require('cors');
+app.use(cors());
 
 
 connectDB();
